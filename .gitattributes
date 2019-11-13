@@ -1,0 +1,3 @@
+* text=auto
+*.meta       merge=binary
+*.aspx linguist-detectable=false
