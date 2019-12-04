@@ -11,6 +11,7 @@ public class GroundManager : MonoBehaviour
     public int maxParts;
     public float partSize;
     public int numberStartParts;
+    public float spawnChanceCoin;
 
     #endregion Arguments-TweakNumbers
 
@@ -46,6 +47,7 @@ public class GroundManager : MonoBehaviour
         {
             spawnPosition = GetSpawnPosition();
             newPart = Instantiate(mapParts[0], spawnPosition, Quaternion.identity, transform) as GameObject;
+            ActivateRandomCoin(newPart);
             instanciatedParts.Add(newPart);
         }
     }
@@ -57,6 +59,7 @@ public class GroundManager : MonoBehaviour
         Vector3 spawnPosition = GetSpawnPosition();
 
         newPart = Instantiate(GetRandomPart(), spawnPosition, Quaternion.identity, transform) as GameObject;
+        ActivateRandomCoin(newPart);
         instanciatedParts.Add(newPart);
     }
 
@@ -81,6 +84,14 @@ public class GroundManager : MonoBehaviour
         return spawnPos;
     }
 
+    private void ActivateRandomCoin(GameObject newPart) {
+      Transform coins;
+
+      if(Random.value < spawnChanceCoin) {
+        coins = newPart.transform.Find("Coins");
+        coins.GetChild(Random.Range(0, coins.childCount - 1)).transform.gameObject.SetActive(true);
+      }
+    }
     #endregion PartCreation
 
     public void DeleteFirstPart()

@@ -17,7 +17,7 @@ public class Knight : MonoBehaviour {
 		currentColumn = 1;
 		currentLane = 2;
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 		//Up
@@ -68,10 +68,10 @@ public class Knight : MonoBehaviour {
 	}
 
 	void OnCollisionEnter(Collision collision) {
-		Debug.Log(transform.name + " collision with " + collision.transform.name);     
+		//Debug.Log(transform.name + " collision with " + collision.transform.name);
     }
 
     void OnTriggerEnter(Collider other){
-		Debug.Log(transform.name + " triggered " + other.transform.name);     
+		//Debug.Log(transform.name + " triggered " + other.transform.name);     
     }
 }
