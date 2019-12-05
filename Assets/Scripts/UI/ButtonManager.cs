@@ -1,33 +1,38 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ButtonManager : MonoBehaviour
 {
-    public Sprite idleSprite;
-    public Sprite hoverSprite;
-    private bool isIdle;
-
-    // Start is called before the first frame update
-    void Start()
+    public void Restart()
     {
-        isIdle = true;
+        SceneManager.LoadScene("Level", LoadSceneMode.Single);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void BackToMain()
     {
-        
+        SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
     }
 
-    void OnMouseOver()
+    public void ReturnBack()
     {
-        transform.GetComponent<Image>().sprite = hoverSprite;
+        SceneManager.UnloadSceneAsync(SceneManager.sceneCount);
     }
 
-    private void OnMouseExit()
+    public void DisplaySettings()
     {
-        transform.GetComponent<Image>().sprite = idleSprite;
+        SceneManager.LoadScene("Settings", LoadSceneMode.Additive);
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
+
+    public void HideCanvas()
+    {
+        GameObject.Find("Canvas").SetActive(false);
     }
 }
