@@ -77,7 +77,7 @@ public class GroundManager : MonoBehaviour
         Vector3 spawnPos = Vector3.zero;
 
         if (instanciatedParts.Count > 0)
-            spawnPos.x = partSize + instanciatedParts[instanciatedParts.Count - 1].transform.position.x;
+            spawnPos.z = partSize + instanciatedParts[instanciatedParts.Count - 1].transform.position.z;
         return spawnPos;
     }
 
