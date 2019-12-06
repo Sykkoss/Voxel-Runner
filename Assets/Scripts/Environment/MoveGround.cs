@@ -12,13 +12,11 @@ public class MoveGround : MonoBehaviour
     #endregion Argument-TweekNumbers
 
     private float actualSpeed;
-    private float distanceTraveled;
     private GroundManager groundManager;
 
     private void Start()
     {
         actualSpeed = startSpeed;
-        distanceTraveled = 0f;
         groundManager = GetComponent<GroundManager>();
     }
 
@@ -31,29 +29,31 @@ public class MoveGround : MonoBehaviour
 
     private void MoveParts()
     {
-        transform.Translate(Vector3.left * actualSpeed * Time.deltaTime);
-        distanceTraveled += actualSpeed * Time.deltaTime;
+        transform.Translate(Vector3.back * actualSpeed * Time.deltaTime);
     }
 
     private void DeletePassedParts()
     {
-        if (distanceTraveled >= groundManager.GetPartSize() * 2)
+        Transform firstChild = null;
+
+        if (transform.childCount > 0)
         {
-            groundManager.DeleteFirstPart();
-            distanceTraveled -= groundManager.GetPartSize();
+            firstChild = transform.GetChild(0);
+            if (firstChild != null && Mathf.Abs(firstChild.transform.position.z) >= groundManager.GetPartSize() * 2)
+                groundManager.DeleteFirstPart();
         }
     }
 
     private void ResetPartPosition()
     {
-        if (Mathf.Abs(transform.position.x) >= groundManager.GetPartSize() * numberTilesBeforeReset)
+        if (Mathf.Abs(transform.position.z) >= groundManager.GetPartSize() * numberTilesBeforeReset)
         {
             transform.position = Vector3.zero;
             foreach (Transform child in transform)
             {
                 Vector3 childNewPos = child.position;
 
-                childNewPos.x -= groundManager.GetPartSize() * numberTilesBeforeReset;
+                childNewPos.z -= groundManager.GetPartSize() * numberTilesBeforeReset;
                 child.position = childNewPos;
             }
         }
