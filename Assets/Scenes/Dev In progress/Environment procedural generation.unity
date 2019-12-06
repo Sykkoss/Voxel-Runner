@@ -434,5 +434,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef7950ddae248d24794d9e4ba87a334a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startSpeed: 50
+  startSpeed: 5
   numberTilesBeforeReset: 3
