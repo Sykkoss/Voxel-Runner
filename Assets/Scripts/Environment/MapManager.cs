@@ -31,12 +31,14 @@ public class MapManager : MonoBehaviour
         instanciatedSide = new List<GameObject>(maxParts);
         lastRandomGround = 0;
         lastRandomSide = 0;
-        GenerateBeginning();
+        if (groundParts.Length > 0 && sideParts.Length > 0)
+            GenerateBeginning();
     }
 
     private void Update()
     {
-        if (instanciatedGround.Count < maxParts)
+        if (groundParts.Length > 0 && sideParts.Length > 0 &&
+            instanciatedGround.Count < maxParts)
             GenerateNewPart();
     }
     #endregion Monobehaviour
