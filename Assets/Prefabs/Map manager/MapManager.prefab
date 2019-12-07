@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6897591360936089593
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6897591360936089594}
+  - component: {fileID: 6897591360936089595}
+  - component: {fileID: 6897591360936089596}
+  m_Layer: 0
+  m_Name: MapManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6897591360936089594
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6897591360936089593}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6897591360936089595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6897591360936089593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a83cf4b9d36061a499c6d40655a884e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxParts: 20
+  partSize: 2.7
+  numberStartParts: 3
+  numberPartsToChangeBiome: 10
+  biomes:
+  - groundParts:
+    - {fileID: 122224, guid: 4290fc06906297e4e88acef37d498339, type: 3}
+    - {fileID: 105518, guid: 5100bfb5ad632bf419594286f97ca627, type: 3}
+    - {fileID: 122224, guid: 183876ac629195d4987c4e916e165a01, type: 3}
+    - {fileID: 129368, guid: ec8843646b78cd243acdac1d7372dc11, type: 3}
+    - {fileID: 122224, guid: e61551de0b3055e44970c5f80cc21efc, type: 3}
+    - {fileID: 191416, guid: de3c4538811e156418837a6847ada5af, type: 3}
+    - {fileID: 126642, guid: e27d2e9659c129646b0d01bbcf9342f3, type: 3}
+    sideParts:
+    - {fileID: 105518, guid: 0f3843f216adbe241a413ed12fdcbf89, type: 3}
+    - {fileID: 148678, guid: ea1a8528eb09fb749bb13070c65fec37, type: 3}
+    - {fileID: 120340, guid: a16513a7e0598fa42a5e76622c66a542, type: 3}
+    - {fileID: 130226, guid: 15de069950a90f04086ad12adf3aae01, type: 3}
+    - {fileID: 148678, guid: dba8b54e6dc658c4c81da46cc86dfc96, type: 3}
+    - {fileID: 120340, guid: 115c63aa14aba7c4497acdc9f2432dda, type: 3}
+    - {fileID: 120340, guid: 1af92d85825d7ce41b51b433bf640f77, type: 3}
+    - {fileID: 148678, guid: 8993279f9db89d1489e66a4333a87823, type: 3}
+    - {fileID: 130226, guid: 4958f13fe77737e478d739ac4732d739, type: 3}
+  - groundParts:
+    - {fileID: 4202231809106708447, guid: f60a5095bb8764144b1eec034ebeb2e0, type: 3}
+    - {fileID: 620454071928652640, guid: 49c7cf601fa4c484881327e4807798aa, type: 3}
+    - {fileID: 4202231809106708447, guid: 84722783bdaa58d4b8554c1e1f3ed6bc, type: 3}
+    - {fileID: 4202231809106708447, guid: df6217a57b096f148bf8099d456666f2, type: 3}
+    - {fileID: 6151498032033624931, guid: e12f1a6d704b69040a27fd5e218f6944, type: 3}
+    sideParts:
+    - {fileID: 105518, guid: 0f3843f216adbe241a413ed12fdcbf89, type: 3}
+    - {fileID: 148678, guid: ea1a8528eb09fb749bb13070c65fec37, type: 3}
+    - {fileID: 120340, guid: a16513a7e0598fa42a5e76622c66a542, type: 3}
+    - {fileID: 130226, guid: 15de069950a90f04086ad12adf3aae01, type: 3}
+    - {fileID: 148678, guid: dba8b54e6dc658c4c81da46cc86dfc96, type: 3}
+    - {fileID: 120340, guid: 115c63aa14aba7c4497acdc9f2432dda, type: 3}
+    - {fileID: 120340, guid: 1af92d85825d7ce41b51b433bf640f77, type: 3}
+    - {fileID: 148678, guid: 8993279f9db89d1489e66a4333a87823, type: 3}
+    - {fileID: 130226, guid: 4958f13fe77737e478d739ac4732d739, type: 3}
+--- !u!114 &6897591360936089596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6897591360936089593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef7950ddae248d24794d9e4ba87a334a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startSpeed: 5
+  numberTilesBeforeReset: 3

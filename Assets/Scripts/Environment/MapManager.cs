@@ -2,6 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
+public struct Biome
+{
+    public GameObject[] groundParts; /* Number 0 must be the empty basic part */
+    public GameObject[] sideParts; /* Number 0 must be the empty basic part */
+}
+
 public class MapManager : MonoBehaviour
 {
     #region Arguments-Public
@@ -11,11 +18,11 @@ public class MapManager : MonoBehaviour
     public int maxParts;
     public float partSize;
     public int numberStartParts;
+    public int numberPartsToChangeBiome;
 
     #endregion Arguments-TweakNumbers
 
-    public GameObject[] groundParts; /* Number 0 must be the empty basic part ! */
-    public GameObject[] sideParts; /* Number 0 must be the empty basic part ! */
+    public Biome[] biomes;
 
     #endregion Arguments-Public
 
@@ -23,27 +30,59 @@ public class MapManager : MonoBehaviour
     private List<GameObject> instanciatedSide;
     private int lastRandomGround;
     private int lastRandomSide;
+    private int numberPartsTraveled;
+    private int currentBiome;
+
 
     #region Monobehaviour
+
     private void Start()
     {
         instanciatedGround = new List<GameObject>(maxParts);
         instanciatedSide = new List<GameObject>(maxParts);
         lastRandomGround = 0;
         lastRandomSide = 0;
-        if (groundParts.Length > 0 && sideParts.Length > 0)
-            GenerateBeginning();
+        numberPartsTraveled = 0;
+        currentBiome = -1;
+        GenerateNextBiome();
     }
 
+    // Change to next biome if player traveled enough. Then generate a new part if needed
     private void Update()
     {
-        if (groundParts.Length > 0 && sideParts.Length > 0 &&
-            instanciatedGround.Count < maxParts)
+        if (numberPartsTraveled >= numberPartsToChangeBiome)
+        {
+            numberPartsTraveled = 0;
+            GenerateNextBiome();
+        }
+        if (CheckBiomes() && instanciatedGround.Count < maxParts)
             GenerateNewPart();
     }
+
     #endregion Monobehaviour
 
+
     #region PartCreation
+
+    // Check if public variables are correctly filled
+    private bool CheckBiomes()
+    {
+        foreach (Biome biome in biomes)
+        {
+            if (biome.groundParts.Length <= 0 || biome.sideParts.Length <= 0)
+            {
+                Debug.LogError("Error: Ground parts or side parts are not given for a biome in MapManager.");
+                return false;
+            }
+        }
+        if (biomes.Length > 0)
+            return true;
+        else
+        {
+            Debug.LogError("Error: No biome given in MapManager.");
+            return false;
+        }
+    }
 
     // Create beginning parts. Create 'numberStartParts' parts only with the first 'groundParts' part (empty tile)
     private void GenerateBeginning()
@@ -51,14 +90,16 @@ public class MapManager : MonoBehaviour
         GameObject newGround;
         GameObject newSide;
         Vector3 spawnPosition;
+        int generatedStartParts = 0;
 
-        while (instanciatedGround.Count < numberStartParts)
+        while (generatedStartParts < numberStartParts)
         {
             spawnPosition = GetSpawnPosition();
-            newGround = Instantiate(groundParts[0], spawnPosition, Quaternion.identity, transform) as GameObject;
-            newSide = Instantiate(sideParts[0], spawnPosition, Quaternion.identity, transform) as GameObject;
+            newGround = Instantiate(biomes[currentBiome].groundParts[0], spawnPosition, Quaternion.identity, transform) as GameObject;
+            newSide = Instantiate(biomes[currentBiome].sideParts[0], spawnPosition, Quaternion.identity, transform) as GameObject;
             instanciatedGround.Add(newGround);
             instanciatedSide.Add(newSide);
+            generatedStartParts += 1;
         }
     }
 
@@ -69,6 +110,7 @@ public class MapManager : MonoBehaviour
         GameObject newSide;
         Vector3 spawnPosition = GetSpawnPosition();
 
+        numberPartsTraveled += 1;
         newGround = Instantiate(GetRandomGround(), spawnPosition, Quaternion.identity, transform) as GameObject;
         newSide = Instantiate(GetRandomSide(), spawnPosition, Quaternion.identity, transform) as GameObject;
         instanciatedGround.Add(newGround);
@@ -81,9 +123,9 @@ public class MapManager : MonoBehaviour
         int randomNumber = lastRandomGround;
 
         while (randomNumber == lastRandomGround)
-            randomNumber = Random.Range(0, groundParts.Length);
+            randomNumber = Random.Range(0, biomes[currentBiome].groundParts.Length);
         lastRandomGround = randomNumber;
-        return groundParts[randomNumber];
+        return biomes[currentBiome].groundParts[randomNumber];
     }
 
     // Get a random part from the array 'sideParts'. Does not allow to have the same tile side to side
@@ -92,9 +134,9 @@ public class MapManager : MonoBehaviour
         int randomNumber = lastRandomSide;
 
         while (randomNumber == lastRandomSide)
-            randomNumber = Random.Range(0, sideParts.Length);
+            randomNumber = Random.Range(0, biomes[currentBiome].sideParts.Length);
         lastRandomSide = randomNumber;
-        return sideParts[randomNumber];
+        return biomes[currentBiome].sideParts[randomNumber];
     }
 
     // Get spawn position for new part taking 'partSize' and the number of instanciated parts
@@ -107,8 +149,7 @@ public class MapManager : MonoBehaviour
         return spawnPos;
     }
 
-    #endregion PartCreation
-
+    // Delete first ground and side parts to be generated
     public void DeleteFirstPart()
     {
         Destroy(instanciatedGround[0]); // Destroy ground
@@ -116,6 +157,27 @@ public class MapManager : MonoBehaviour
         Destroy(instanciatedSide[0]); // Destroy side
         instanciatedSide.RemoveAt(0);
     }
+
+    #endregion PartCreation
+
+
+    #region BiomeManagement
+
+    // Change to next biome (or reset to first one if no next) and generate beginning of biome
+    private void GenerateNextBiome()
+    {
+        int totalBiomes = biomes.Length;
+
+        if (currentBiome + 1 >= totalBiomes)
+            currentBiome = 0;
+        else
+            currentBiome += 1;
+
+        if (CheckBiomes())
+            GenerateBeginning();
+    }
+
+    #endregion BiomeManagement
 
     public float GetPartSize()
     {
