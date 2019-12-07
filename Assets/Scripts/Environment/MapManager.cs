@@ -2,8 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
+public struct Biome
+{
+    public GameObject[] groundParts; /* Number 0 must be the empty basic part ! */
+    public GameObject[] sideParts; /* Number 0 must be the empty basic part ! */
+}
+
 public class MapManager : MonoBehaviour
 {
+
+
     #region Arguments-Public
 
     #region Arguments-TweakNumbers
@@ -14,8 +23,7 @@ public class MapManager : MonoBehaviour
 
     #endregion Arguments-TweakNumbers
 
-    public GameObject[] groundParts; /* Number 0 must be the empty basic part ! */
-    public GameObject[] sideParts; /* Number 0 must be the empty basic part ! */
+    public Biome[] biomes;
 
     #endregion Arguments-Public
 
@@ -55,8 +63,8 @@ public class MapManager : MonoBehaviour
         while (instanciatedGround.Count < numberStartParts)
         {
             spawnPosition = GetSpawnPosition();
-            newGround = Instantiate(groundParts[0], spawnPosition, Quaternion.identity, transform) as GameObject;
-            newSide = Instantiate(sideParts[0], spawnPosition, Quaternion.identity, transform) as GameObject;
+            newGround = Instantiate(biomes[0].groundParts[0], spawnPosition, Quaternion.identity, transform) as GameObject;
+            newSide = Instantiate(biomes[0].sideParts[0], spawnPosition, Quaternion.identity, transform) as GameObject;
             instanciatedGround.Add(newGround);
             instanciatedSide.Add(newSide);
         }
@@ -81,9 +89,9 @@ public class MapManager : MonoBehaviour
         int randomNumber = lastRandomGround;
 
         while (randomNumber == lastRandomGround)
-            randomNumber = Random.Range(0, groundParts.Length);
+            randomNumber = Random.Range(0, biomes[0].groundParts.Length);
         lastRandomGround = randomNumber;
-        return groundParts[randomNumber];
+        return biomes[0].groundParts[randomNumber];
     }
 
     // Get a random part from the array 'sideParts'. Does not allow to have the same tile side to side
@@ -92,9 +100,9 @@ public class MapManager : MonoBehaviour
         int randomNumber = lastRandomSide;
 
         while (randomNumber == lastRandomSide)
-            randomNumber = Random.Range(0, sideParts.Length);
+            randomNumber = Random.Range(0, biomes[0].sideParts.Length);
         lastRandomSide = randomNumber;
-        return sideParts[randomNumber];
+        return biomes[0].sideParts[randomNumber];
     }
 
     // Get spawn position for new part taking 'partSize' and the number of instanciated parts
