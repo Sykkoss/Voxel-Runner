@@ -204,13 +204,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 27008863}
-  m_LocalRotation: {x: 0.6741714, y: 0.27454546, z: 0.41896155, w: 0.5427605}
+  m_LocalRotation: {x: 0.7173529, y: -0.12364002, z: 0.06843039, w: 0.6822281}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 149.882, y: -86.037994, z: -72.50299}
+  m_LocalEulerAnglesHint: {x: 95.303986, y: 49.720993, z: 65.34899}
 --- !u!1001 &246088630
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -424,100 +424,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6897591360936089595, guid: ae9abd324bd75404cbb1b5b28c604066,
-        type: 3}
-      propertyPath: biomes.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6897591360936089595, guid: ae9abd324bd75404cbb1b5b28c604066,
-        type: 3}
-      propertyPath: biomes.Array.data[0].groundParts.Array.size
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 6897591360936089595, guid: ae9abd324bd75404cbb1b5b28c604066,
-        type: 3}
-      propertyPath: biomes.Array.data[0].sideParts.Array.size
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 6897591360936089595, guid: ae9abd324bd75404cbb1b5b28c604066,
-        type: 3}
-      propertyPath: biomes.Array.data[0].groundParts.Array.data[0]
-      value: 
-      objectReference: {fileID: 122224, guid: 4290fc06906297e4e88acef37d498339, type: 3}
-    - target: {fileID: 6897591360936089595, guid: ae9abd324bd75404cbb1b5b28c604066,
-        type: 3}
-      propertyPath: biomes.Array.data[0].groundParts.Array.data[1]
-      value: 
-      objectReference: {fileID: 105518, guid: 5100bfb5ad632bf419594286f97ca627, type: 3}
-    - target: {fileID: 6897591360936089595, guid: ae9abd324bd75404cbb1b5b28c604066,
-        type: 3}
-      propertyPath: biomes.Array.data[0].groundParts.Array.data[2]
-      value: 
-      objectReference: {fileID: 122224, guid: 183876ac629195d4987c4e916e165a01, type: 3}
-    - target: {fileID: 6897591360936089595, guid: ae9abd324bd75404cbb1b5b28c604066,
-        type: 3}
-      propertyPath: biomes.Array.data[0].groundParts.Array.data[3]
-      value: 
-      objectReference: {fileID: 129368, guid: ec8843646b78cd243acdac1d7372dc11, type: 3}
-    - target: {fileID: 6897591360936089595, guid: ae9abd324bd75404cbb1b5b28c604066,
-        type: 3}
-      propertyPath: biomes.Array.data[0].groundParts.Array.data[4]
-      value: 
-      objectReference: {fileID: 122224, guid: e61551de0b3055e44970c5f80cc21efc, type: 3}
-    - target: {fileID: 6897591360936089595, guid: ae9abd324bd75404cbb1b5b28c604066,
-        type: 3}
-      propertyPath: biomes.Array.data[0].groundParts.Array.data[5]
-      value: 
-      objectReference: {fileID: 191416, guid: de3c4538811e156418837a6847ada5af, type: 3}
-    - target: {fileID: 6897591360936089595, guid: ae9abd324bd75404cbb1b5b28c604066,
-        type: 3}
-      propertyPath: biomes.Array.data[0].groundParts.Array.data[6]
-      value: 
-      objectReference: {fileID: 126642, guid: e27d2e9659c129646b0d01bbcf9342f3, type: 3}
-    - target: {fileID: 6897591360936089595, guid: ae9abd324bd75404cbb1b5b28c604066,
-        type: 3}
-      propertyPath: biomes.Array.data[0].sideParts.Array.data[0]
-      value: 
-      objectReference: {fileID: 105518, guid: 0f3843f216adbe241a413ed12fdcbf89, type: 3}
-    - target: {fileID: 6897591360936089595, guid: ae9abd324bd75404cbb1b5b28c604066,
-        type: 3}
-      propertyPath: biomes.Array.data[0].sideParts.Array.data[1]
-      value: 
-      objectReference: {fileID: 148678, guid: ea1a8528eb09fb749bb13070c65fec37, type: 3}
-    - target: {fileID: 6897591360936089595, guid: ae9abd324bd75404cbb1b5b28c604066,
-        type: 3}
-      propertyPath: biomes.Array.data[0].sideParts.Array.data[2]
-      value: 
-      objectReference: {fileID: 120340, guid: a16513a7e0598fa42a5e76622c66a542, type: 3}
-    - target: {fileID: 6897591360936089595, guid: ae9abd324bd75404cbb1b5b28c604066,
-        type: 3}
-      propertyPath: biomes.Array.data[0].sideParts.Array.data[3]
-      value: 
-      objectReference: {fileID: 130226, guid: 15de069950a90f04086ad12adf3aae01, type: 3}
-    - target: {fileID: 6897591360936089595, guid: ae9abd324bd75404cbb1b5b28c604066,
-        type: 3}
-      propertyPath: biomes.Array.data[0].sideParts.Array.data[4]
-      value: 
-      objectReference: {fileID: 148678, guid: dba8b54e6dc658c4c81da46cc86dfc96, type: 3}
-    - target: {fileID: 6897591360936089595, guid: ae9abd324bd75404cbb1b5b28c604066,
-        type: 3}
-      propertyPath: biomes.Array.data[0].sideParts.Array.data[5]
-      value: 
-      objectReference: {fileID: 120340, guid: 115c63aa14aba7c4497acdc9f2432dda, type: 3}
-    - target: {fileID: 6897591360936089595, guid: ae9abd324bd75404cbb1b5b28c604066,
-        type: 3}
-      propertyPath: biomes.Array.data[0].sideParts.Array.data[6]
-      value: 
-      objectReference: {fileID: 120340, guid: 1af92d85825d7ce41b51b433bf640f77, type: 3}
-    - target: {fileID: 6897591360936089595, guid: ae9abd324bd75404cbb1b5b28c604066,
-        type: 3}
-      propertyPath: biomes.Array.data[0].sideParts.Array.data[7]
-      value: 
-      objectReference: {fileID: 148678, guid: 8993279f9db89d1489e66a4333a87823, type: 3}
-    - target: {fileID: 6897591360936089595, guid: ae9abd324bd75404cbb1b5b28c604066,
-        type: 3}
-      propertyPath: biomes.Array.data[0].sideParts.Array.data[8]
-      value: 
-      objectReference: {fileID: 130226, guid: 4958f13fe77737e478d739ac4732d739, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae9abd324bd75404cbb1b5b28c604066, type: 3}
