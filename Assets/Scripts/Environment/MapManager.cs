@@ -7,6 +7,10 @@ public struct Biome
 {
     public GameObject[] groundParts; /* Number 0 must be the empty basic part */
     public GameObject[] sideParts; /* Number 0 must be the empty basic part */
+    public GameObject[] inTransitionGround; /* Must be in order */
+    public GameObject[] inTransitionSide; /* Must be in order */
+    public GameObject[] outTransitionGround; /* Must be in order */
+    public GameObject[] outTransitionSide; /* Must be in order */
 }
 
 public class MapManager : MonoBehaviour
@@ -44,7 +48,7 @@ public class MapManager : MonoBehaviour
         lastRandomSide = 0;
         numberPartsTraveled = 0;
         currentBiome = -1;
-        GenerateNextBiome();
+        GenerateNextBiome(false);
     }
 
     // Change to next biome if player traveled enough. Then generate a new part if needed
@@ -53,7 +57,7 @@ public class MapManager : MonoBehaviour
         if (numberPartsTraveled >= numberPartsToChangeBiome)
         {
             numberPartsTraveled = 0;
-            GenerateNextBiome();
+            GenerateNextBiome(true);
         }
         if (CheckBiomes() && instanciatedGround.Count < maxParts)
             GenerateNewPart();
@@ -152,9 +156,12 @@ public class MapManager : MonoBehaviour
     // Delete first ground and side parts to be generated
     public void DeleteFirstPart()
     {
-        Destroy(instanciatedGround[0]); // Destroy ground
+        GameObject groundToDelete = instanciatedGround[0];
+
+        Destroy(groundToDelete); // Destroy ground
         instanciatedGround.RemoveAt(0);
-        Destroy(instanciatedSide[0]); // Destroy side
+
+        Destroy(instanciatedSide[0]); // Destroy side if part is not transition
         instanciatedSide.RemoveAt(0);
     }
 
@@ -164,17 +171,41 @@ public class MapManager : MonoBehaviour
     #region BiomeManagement
 
     // Change to next biome (or reset to first one if no next) and generate beginning of biome
-    private void GenerateNextBiome()
+    private void GenerateNextBiome(bool generateTransitions)
     {
         int totalBiomes = biomes.Length;
 
+        if (generateTransitions)
+            GenerateTransitionBiome(biomes[currentBiome].outTransitionGround, biomes[currentBiome].outTransitionSide);
         if (currentBiome + 1 >= totalBiomes)
             currentBiome = 0;
         else
             currentBiome += 1;
 
+        if (generateTransitions)
+            GenerateTransitionBiome(biomes[currentBiome].inTransitionGround, biomes[currentBiome].inTransitionSide);
         if (CheckBiomes())
             GenerateBeginning();
+    }
+
+    private void GenerateTransitionBiome(GameObject[] transitionGround, GameObject[] transitionSide)
+    {
+        if (transitionGround.Length <= 0 || transitionGround.Length <= 0)
+        {
+            Debug.LogError("Error: A transition part is not given.");
+            return;
+        }
+        for (int index = 0; index < transitionGround.Length; index++)
+        {
+            GameObject newGround;
+            GameObject newSide;
+            Vector3 spawnPosition = GetSpawnPosition();
+
+            newGround = Instantiate(transitionGround[index], spawnPosition, Quaternion.identity, transform) as GameObject;
+            newSide = Instantiate(transitionSide[index], spawnPosition, Quaternion.identity, transform) as GameObject;
+            instanciatedGround.Add(newGround);
+            instanciatedSide.Add(newSide);
+        }
     }
 
     #endregion BiomeManagement
