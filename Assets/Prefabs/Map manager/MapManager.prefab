@@ -67,6 +67,14 @@ MonoBehaviour:
     - {fileID: 120340, guid: 1af92d85825d7ce41b51b433bf640f77, type: 3}
     - {fileID: 148678, guid: 8993279f9db89d1489e66a4333a87823, type: 3}
     - {fileID: 130226, guid: 4958f13fe77737e478d739ac4732d739, type: 3}
+    inTransitionGround:
+    - {fileID: 122224, guid: 95f570e5f7a37224d9cad8e449d0b048, type: 3}
+    inTransitionSide:
+    - {fileID: 105518, guid: 41df8cd680928f545845237fcf0cd77a, type: 3}
+    outTransitionGround:
+    - {fileID: 122224, guid: 2ec1a50288a5c8741ae182ff262b2dc8, type: 3}
+    outTransitionSide:
+    - {fileID: 105518, guid: 29c6d9e9436f3e041a921bf07926beef, type: 3}
   - groundParts:
     - {fileID: 4202231809106708447, guid: f60a5095bb8764144b1eec034ebeb2e0, type: 3}
     - {fileID: 620454071928652640, guid: 49c7cf601fa4c484881327e4807798aa, type: 3}
@@ -74,15 +82,19 @@ MonoBehaviour:
     - {fileID: 4202231809106708447, guid: df6217a57b096f148bf8099d456666f2, type: 3}
     - {fileID: 6151498032033624931, guid: e12f1a6d704b69040a27fd5e218f6944, type: 3}
     sideParts:
-    - {fileID: 105518, guid: 0f3843f216adbe241a413ed12fdcbf89, type: 3}
-    - {fileID: 148678, guid: ea1a8528eb09fb749bb13070c65fec37, type: 3}
-    - {fileID: 120340, guid: a16513a7e0598fa42a5e76622c66a542, type: 3}
-    - {fileID: 130226, guid: 15de069950a90f04086ad12adf3aae01, type: 3}
-    - {fileID: 148678, guid: dba8b54e6dc658c4c81da46cc86dfc96, type: 3}
-    - {fileID: 120340, guid: 115c63aa14aba7c4497acdc9f2432dda, type: 3}
-    - {fileID: 120340, guid: 1af92d85825d7ce41b51b433bf640f77, type: 3}
-    - {fileID: 148678, guid: 8993279f9db89d1489e66a4333a87823, type: 3}
-    - {fileID: 130226, guid: 4958f13fe77737e478d739ac4732d739, type: 3}
+    - {fileID: 130226, guid: e2fa42210798d9f46be72cb7dead1128, type: 3}
+    - {fileID: 130226, guid: 7dbcf7e8fc2bfa546beb5f55084dd17c, type: 3}
+    - {fileID: 130226, guid: 1ffc753862d727845a7a2ad4a3efe728, type: 3}
+    - {fileID: 130226, guid: 69ff978b19e997943958e9e4a4416e21, type: 3}
+    - {fileID: 130226, guid: 2bef5d42ae5b0d442a43a90ec1a6af86, type: 3}
+    inTransitionGround:
+    - {fileID: 4202231809106708447, guid: 100ff9ce04535b24daa0e301f38279a1, type: 3}
+    inTransitionSide:
+    - {fileID: 130226, guid: af6831ced41bc1247a8a7263dada6403, type: 3}
+    outTransitionGround:
+    - {fileID: 4202231809106708447, guid: 0a7c6e8e307c66340b72476db241c1fd, type: 3}
+    outTransitionSide:
+    - {fileID: 130226, guid: 90a7c89d7b9e5904f97bece40a1b7135, type: 3}
 --- !u!114 &6897591360936089596
 MonoBehaviour:
   m_ObjectHideFlags: 0
