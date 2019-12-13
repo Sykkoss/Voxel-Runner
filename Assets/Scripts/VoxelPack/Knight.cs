@@ -12,11 +12,21 @@ public class Knight : MonoBehaviour {
 	private int currentLane;
 	private int currentColumn;
 
+    private BoxCollider coll;
+    private bool isJumping;
+
+    private Vector3 baseCenter, baseSize;
+
 	// Use this for initialization
 	void Start () {
 		currentColumn = 1;
 		currentLane = 2;
-	}
+        coll = GetComponent<BoxCollider>();
+        isJumping = false;
+        baseCenter = coll.center;
+        baseSize = coll.size;
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -34,7 +44,22 @@ public class Knight : MonoBehaviour {
 		if(Input.GetKeyDown(KeyCode.RightArrow)){
 			Move(Direction.Right);
 		}
+
+        if (Input.GetKeyDown(KeyCode.Space) && !isJumping)
+        {
+            StartCoroutine(Jump());
+        }
 	}
+
+    private IEnumerator Jump()
+    {
+        isJumping = true;
+        yield return new WaitForSeconds(2f);
+        coll.center = baseCenter;
+        coll.size = baseSize;
+        isJumping = false;
+
+    }
 
 	void Move(Direction direction){
 		//Temp
