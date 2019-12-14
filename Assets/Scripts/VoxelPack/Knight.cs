@@ -13,9 +13,11 @@ public class Knight : MonoBehaviour {
 	private int currentColumn;
 
     private BoxCollider coll;
-    private bool isJumping;
+    private bool isDoingAction;
 
     private Vector3 baseCenter, baseSize;
+    private Vector3 smallSize;
+    private Vector3 jumpPos, slidePos;
 
 	// Use this for initialization
 	void Start () {
@@ -25,7 +27,9 @@ public class Knight : MonoBehaviour {
         isJumping = false;
         baseCenter = coll.center;
         baseSize = coll.size;
-
+        smallSize = new Vector3(coll.size.x, .4f, coll.size.z);
+        jumpPos = new Vector3(coll.center.x, .2f, coll.center.z);
+        slidePos = new Vector3(coll.center.x, -.2f, coll.center.z);
     }
 	
 	// Update is called once per frame
@@ -45,19 +49,25 @@ public class Knight : MonoBehaviour {
 			Move(Direction.Right);
 		}
 
-        if (Input.GetKeyDown(KeyCode.Space) && !isJumping)
+        if (Input.GetKeyDown(KeyCode.Space) && !isDoingAction)
         {
-            StartCoroutine(Jump());
+            StartCoroutine(DoAction(jumpPos));
         }
-	}
+        else if (Input.GetKeyDown(KeyCode.DownArrow) && !isDoingAction)
+        {
+            StartCoroutine(DoAction(slidePos));
+        }
+    }
 
-    private IEnumerator Jump()
+    private IEnumerator DoAction(Vector3 center)
     {
-        isJumping = true;
+        isDoingAction = true;
+        coll.center = center;
+        coll.size = smallSize;
         yield return new WaitForSeconds(2f);
         coll.center = baseCenter;
         coll.size = baseSize;
-        isJumping = false;
+        isDoingAction = false;
 
     }
 
