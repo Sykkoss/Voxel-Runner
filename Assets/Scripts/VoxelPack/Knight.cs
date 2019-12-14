@@ -24,10 +24,10 @@ public class Knight : MonoBehaviour {
 		currentColumn = 1;
 		currentLane = 2;
         coll = GetComponent<BoxCollider>();
-        isJumping = false;
+        isDoingAction = false;
         baseCenter = coll.center;
         baseSize = coll.size;
-        smallSize = new Vector3(coll.size.x, .4f, coll.size.z);
+        smallSize = new Vector3(coll.size.x, .3f, coll.size.z);
         jumpPos = new Vector3(coll.center.x, .2f, coll.center.z);
         slidePos = new Vector3(coll.center.x, -.2f, coll.center.z);
     }
@@ -64,7 +64,7 @@ public class Knight : MonoBehaviour {
         isDoingAction = true;
         coll.center = center;
         coll.size = smallSize;
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(.5f);
         coll.center = baseCenter;
         coll.size = baseSize;
         isDoingAction = false;
