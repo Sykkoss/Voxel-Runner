@@ -48,6 +48,8 @@ MonoBehaviour:
   partSize: 2.7
   numberStartParts: 3
   numberPartsToChangeBiome: 10
+  spawnChanceObject: 0.4
+  spawnChancePowerUps: 0.1
   biomes:
   - groundParts:
     - {fileID: 122224, guid: 4290fc06906297e4e88acef37d498339, type: 3}
@@ -95,6 +97,12 @@ MonoBehaviour:
     - {fileID: 4202231809106708447, guid: 0a7c6e8e307c66340b72476db241c1fd, type: 3}
     outTransitionSide:
     - {fileID: 130226, guid: 90a7c89d7b9e5904f97bece40a1b7135, type: 3}
+  powerUps:
+  - {fileID: 5765842945518979043, guid: 2a5263962b0aab3438cb299a476a33c8, type: 3}
+  - {fileID: 3995924346623381781, guid: 5a6f210124260f04ca91a620c1481963, type: 3}
+  - {fileID: 7355526859047458979, guid: c86cd549682b6814998cc5364a616b77, type: 3}
+  coinPrefab: {fileID: 7306497490018290000, guid: 9f1e455653af4014089329746f8dc13e,
+    type: 3}
 --- !u!114 &6897591360936089596
 MonoBehaviour:
   m_ObjectHideFlags: 0
