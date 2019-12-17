@@ -18,7 +18,7 @@ public class ButtonManager : MonoBehaviour
 
     public void ReturnBack()
     {
-        SceneManager.UnloadSceneAsync(SceneManager.sceneCount);
+        SceneManager.UnloadSceneAsync(SceneManager.sceneCount - 1);
     }
 
     public void DisplayLeaderboard()
@@ -29,6 +29,11 @@ public class ButtonManager : MonoBehaviour
     public void DisplaySettings()
     {
         SceneManager.LoadScene("Settings", LoadSceneMode.Additive);
+    }
+
+    public void DisplayPause()
+    {
+        SceneManager.LoadScene("Pause", LoadSceneMode.Additive);
     }
 
     public void OpenShop()
