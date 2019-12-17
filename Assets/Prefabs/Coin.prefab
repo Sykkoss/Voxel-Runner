@@ -62,7 +62,7 @@ GameObject:
   - component: {fileID: 4900787856638515623}
   m_Layer: 0
   m_Name: Coin
-  m_TagString: Untagged
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -82,6 +82,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &7218474480213960217
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7310305324629526216}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.39999998, y: 1.7999998, z: 1.7999998}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &5070714873831701084
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -89,6 +102,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3391972144907719546}
     m_Modifications:
+    - target: {fileID: -927199367670048503, guid: 0ff157b694e000e45b0f223a37c4c4b3,
+        type: 3}
+      propertyPath: m_Name
+      value: CoinModel
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 0ff157b694e000e45b0f223a37c4c4b3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 2534866581884222612, guid: 0ff157b694e000e45b0f223a37c4c4b3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Coin
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 0ff157b694e000e45b0f223a37c4c4b3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -159,16 +187,17 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.3
       objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: 0ff157b694e000e45b0f223a37c4c4b3,
-        type: 3}
-      propertyPath: m_Name
-      value: CoinModel
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ff157b694e000e45b0f223a37c4c4b3, type: 3}
 --- !u!4 &226438378292154694 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 0ff157b694e000e45b0f223a37c4c4b3,
+    type: 3}
+  m_PrefabInstance: {fileID: 5070714873831701084}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7310305324629526216 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2534866581884222612, guid: 0ff157b694e000e45b0f223a37c4c4b3,
     type: 3}
   m_PrefabInstance: {fileID: 5070714873831701084}
   m_PrefabAsset: {fileID: 0}
