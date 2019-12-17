@@ -7,6 +7,7 @@ TagManager:
   - Coin
   - Spike
   - Spawnable
+  - Powerup
   layers:
   - Default
   - TransparentFX
