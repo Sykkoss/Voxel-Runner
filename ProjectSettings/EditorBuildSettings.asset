@@ -17,4 +17,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/UIScenes/GameOverMenu.unity
     guid: 9247ca0de9caa4f4c91adcd7f9afc3a2
+  - enabled: 1
+    path: Assets/Scenes/UIScenes/Leaderboard.unity
+    guid: 1abaf44d5b2690d48b1845219f2487a9
+  - enabled: 1
+    path: Assets/Scenes/UIScenes/Shop.unity
+    guid: 01066f2a4096eb3458b00ddf38f1952d
+  - enabled: 1
+    path: Assets/Scenes/UIScenes/Level.unity
+    guid: 47743b899efa01c4c8738b8a7276621f
   m_configObjects: {}

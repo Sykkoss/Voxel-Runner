@@ -18,12 +18,27 @@ public class ButtonManager : MonoBehaviour
 
     public void ReturnBack()
     {
-        SceneManager.UnloadSceneAsync(SceneManager.sceneCount);
+        SceneManager.UnloadSceneAsync(SceneManager.sceneCount - 1);
+    }
+
+    public void DisplayLeaderboard()
+    {
+        SceneManager.LoadScene("Leaderboard", LoadSceneMode.Single);
     }
 
     public void DisplaySettings()
     {
         SceneManager.LoadScene("Settings", LoadSceneMode.Additive);
+    }
+
+    public void DisplayPause()
+    {
+        SceneManager.LoadScene("Pause", LoadSceneMode.Additive);
+    }
+
+    public void OpenShop()
+    {
+        SceneManager.LoadScene("Shop", LoadSceneMode.Single);
     }
 
     public void Quit()
@@ -34,5 +49,21 @@ public class ButtonManager : MonoBehaviour
     public void HideCanvas()
     {
         GameObject.Find("Canvas").SetActive(false);
+    }
+
+    public void ShopEquip()
+    {
+        var tmp = transform.parent.parent.GetChild(1).gameObject;
+        var tmpName = tmp.name.Replace("(Clone)", "");
+        PlayerPrefs.SetString("ActiveSkin", tmpName);
+    }
+
+    public void ShopBuy()
+    {
+        // TODO : Remove 1000 pieces
+        var tmp = transform.parent.parent.GetChild(1).gameObject;
+        var tmpName = tmp.name.Replace("(Clone)", "");
+        PlayerPrefs.SetInt(tmpName, 1);
+        transform.parent.parent.parent.GetComponent<ShopManager>().ResetFocus();
     }
 }

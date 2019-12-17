@@ -7,8 +7,9 @@ public class Leaderboard : MonoBehaviour
 {
     private List<Tuple<int, string>> leaderboard;
 
-    private void Start()
+    private void Awake()
     {
+        leaderboard = new List<Tuple<int, string>>();
         if (PlayerPrefs.HasKey("leaderboard"))
         {
             foreach (string s in PlayerPrefs.GetString("leaderboard").Split('|'))
