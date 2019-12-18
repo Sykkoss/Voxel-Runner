@@ -44,10 +44,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a83cf4b9d36061a499c6d40655a884e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxParts: 20
+  maxParts: 35
   partSize: 2.7
   numberStartParts: 3
-  numberPartsToChangeBiome: 10
+  numberPartsToChangeBiome: 50
+  spawnChanceObject: 0.4
+  spawnChancePowerUps: 0.1
   biomes:
   - groundParts:
     - {fileID: 122224, guid: 4290fc06906297e4e88acef37d498339, type: 3}
@@ -95,6 +97,32 @@ MonoBehaviour:
     - {fileID: 4202231809106708447, guid: 0a7c6e8e307c66340b72476db241c1fd, type: 3}
     outTransitionSide:
     - {fileID: 130226, guid: 90a7c89d7b9e5904f97bece40a1b7135, type: 3}
+  - groundParts:
+    - {fileID: 4202231809106708447, guid: 4031e02f32d46454893ffa6fb34b34c7, type: 3}
+    - {fileID: 4202231809106708447, guid: 87bb7b784d67f0746a1ebcf17f662fee, type: 3}
+    - {fileID: 4202231809106708447, guid: 44f11f56f9e6e34428872e30daa60c8e, type: 3}
+    - {fileID: 4202231809106708447, guid: f6ff784bf69d3d94698c900cd7ff61c9, type: 3}
+    - {fileID: 4202231809106708447, guid: 5cca0c57900290b429ecebc3561dbf12, type: 3}
+    sideParts:
+    - {fileID: 130226, guid: 68c7b3310fcebec409e9bc34d86e87ea, type: 3}
+    - {fileID: 130226, guid: 086d37b6062e66d47914df75a03ba083, type: 3}
+    - {fileID: 130226, guid: fa7616e61d18edc418a9f0ff2daff6d6, type: 3}
+    - {fileID: 130226, guid: ed0dbc6a0bfa8164aaf80df36f5eb4be, type: 3}
+    - {fileID: 130226, guid: 15e18cb1811998746819ddf6a3b60858, type: 3}
+    inTransitionGround:
+    - {fileID: 4202231809106708447, guid: f70696113cc742d4785369240775bc39, type: 3}
+    inTransitionSide:
+    - {fileID: 130226, guid: cb39dd295a515a44cbd6ca842ae6d305, type: 3}
+    outTransitionGround:
+    - {fileID: 4202231809106708447, guid: 7b6131d2b1567f446b03fcb0091c1c52, type: 3}
+    outTransitionSide:
+    - {fileID: 130226, guid: aa824209e47e7b946af6ea70997160ad, type: 3}
+  powerUps:
+  - {fileID: 5765842945518979043, guid: 2a5263962b0aab3438cb299a476a33c8, type: 3}
+  - {fileID: 3995924346623381781, guid: 5a6f210124260f04ca91a620c1481963, type: 3}
+  - {fileID: 7355526859047458979, guid: c86cd549682b6814998cc5364a616b77, type: 3}
+  coinPrefab: {fileID: 7306497490018290000, guid: 9f1e455653af4014089329746f8dc13e,
+    type: 3}
 --- !u!114 &6897591360936089596
 MonoBehaviour:
   m_ObjectHideFlags: 0

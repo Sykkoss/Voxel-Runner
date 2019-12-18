@@ -22,6 +22,7 @@ public class CanvasManager : MonoBehaviour
 
     void RedrawCanvas<Scene> (Scene scene)
     {
-        canvas.SetActive(true);
+        if (canvas)
+            canvas.SetActive(true);
     }
 }
