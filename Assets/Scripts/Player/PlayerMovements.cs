@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PlayerMovements : MonoBehaviour {
 
-    private BoxCollider coll;
+    private BoxCollider[] coll;
     private bool isDoingAction;
 
     private Vector3 baseSize, basePosition;
@@ -12,11 +12,11 @@ public class PlayerMovements : MonoBehaviour {
 
 	private void Start ()
     {
-        coll = GetComponent<BoxCollider>();
+        coll = GetComponentsInChildren<BoxCollider>();
         anim = GetComponentInChildren<Animator>();
         isDoingAction = false;
-        baseSize = coll.size;
-        basePosition = coll.center;
+        baseSize = coll[0].size;
+        basePosition = coll[0].center;
     }
 
 	private void Update ()
@@ -36,11 +36,17 @@ public class PlayerMovements : MonoBehaviour {
     private IEnumerator DoAction(Vector3 center, Vector3 size)
     {
         isDoingAction = true;
-        coll.center = center;
-        coll.size = size;
+        foreach (BoxCollider c in coll)
+        {
+            c.center = center;
+            c.size = size;
+        }
         yield return new WaitForSeconds(1f);
-        coll.center = basePosition;
-        coll.size = baseSize;
+        foreach (BoxCollider c in coll)
+        {
+            c.center = basePosition;
+            c.size = baseSize;
+        }
         isDoingAction = false;
     }
 }
