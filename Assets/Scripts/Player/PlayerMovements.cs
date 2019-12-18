@@ -6,24 +6,25 @@ public class PlayerMovements : MonoBehaviour {
     private BoxCollider coll;
     private bool isDoingAction;
 
-    private Vector3 baseSize;
+    private Vector3 baseSize, basePosition;
 
 	private void Start ()
     {
         coll = GetComponent<BoxCollider>();
         isDoingAction = false;
         baseSize = coll.size;
+        basePosition = coll.center;
     }
 
 	private void Update ()
     {
         if (Input.GetKeyDown(KeyCode.Space) && !isDoingAction)
         {
-            StartCoroutine(DoAction(new Vector3(0f, .9f, 0f), baseSize));
+            StartCoroutine(DoAction(basePosition + new Vector3(0f, .9f, 0f), baseSize));
         }
         else if (Input.GetKeyDown(KeyCode.DownArrow) && !isDoingAction)
         {
-            StartCoroutine(DoAction(Vector3.zero, new Vector3(baseSize.x, baseSize.y / 3f, baseSize.z)));
+            StartCoroutine(DoAction(basePosition - new Vector3(0f, .4f, 0f), new Vector3(baseSize.x, baseSize.y / 3f, baseSize.z)));
         }
     }
 
@@ -33,7 +34,7 @@ public class PlayerMovements : MonoBehaviour {
         coll.center = center;
         coll.size = size;
         yield return new WaitForSeconds(.5f);
-        coll.center = Vector3.zero;
+        coll.center = basePosition;
         coll.size = baseSize;
         isDoingAction = false;
     }
