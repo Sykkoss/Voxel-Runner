@@ -3,11 +3,18 @@
 public class Magnet : MonoBehaviour
 {
     private CollisionManager cm;
+    private SphereCollider magnetCollider;
     private const float speed = 10f;
 
     private void Start()
     {
         cm = transform.parent.GetComponentInChildren<CollisionManager>();
+        magnetCollider = GetComponent<SphereCollider>();
+    }
+
+    private void Update()
+    {
+        magnetCollider.enabled = cm.IsMagnetActive();
     }
 
     private void OnTriggerStay(Collider other)
