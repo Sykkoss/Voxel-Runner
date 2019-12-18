@@ -23,11 +23,14 @@ public class MapManager : MonoBehaviour
     public float partSize;
     public int numberStartParts;
     public int numberPartsToChangeBiome;
+    public float spawnChanceObject;
+    public float spawnChancePowerUps;
 
     #endregion Arguments-TweakNumbers
 
     public Biome[] biomes;
-
+    public GameObject[] powerUps;
+    public GameObject coinPrefab;
     #endregion Arguments-Public
 
     private List<GameObject> instanciatedGround;
@@ -101,6 +104,7 @@ public class MapManager : MonoBehaviour
             spawnPosition = GetSpawnPosition();
             newGround = Instantiate(biomes[currentBiome].groundParts[0], spawnPosition, Quaternion.identity, transform) as GameObject;
             newSide = Instantiate(biomes[currentBiome].sideParts[0], spawnPosition, Quaternion.identity, transform) as GameObject;
+            GenerateObject(newGround);
             instanciatedGround.Add(newGround);
             instanciatedSide.Add(newSide);
             generatedStartParts += 1;
@@ -117,6 +121,7 @@ public class MapManager : MonoBehaviour
         numberPartsTraveled += 1;
         newGround = Instantiate(GetRandomGround(), spawnPosition, Quaternion.identity, transform) as GameObject;
         newSide = Instantiate(GetRandomSide(), spawnPosition, Quaternion.identity, transform) as GameObject;
+        GenerateObject(newGround);
         instanciatedGround.Add(newGround);
         instanciatedSide.Add(newSide);
     }
@@ -163,6 +168,24 @@ public class MapManager : MonoBehaviour
 
         Destroy(instanciatedSide[0]); // Destroy side if part is not transition
         instanciatedSide.RemoveAt(0);
+    }
+
+    private void GenerateObject(GameObject ground)
+    {
+      Transform spawn;
+      GameObject spawnPoint;
+
+      if (Random.value < spawnChanceObject) {
+        spawn = ground.transform.Find("Coins");
+        spawnPoint = spawn.GetChild(Random.Range(0, spawn.childCount - 1)).transform.gameObject;
+        if (Random.value < spawnChancePowerUps) {
+          //Spawn random powerUps
+          Instantiate(powerUps[Random.Range(0, powerUps.Length - 1)], spawnPoint.transform.position , Quaternion.identity, spawnPoint.transform);
+        } else {
+          //Spawn coin
+          Instantiate(coinPrefab, spawnPoint.transform.position , Quaternion.identity, spawnPoint.transform);
+        }
+      }
     }
 
     #endregion PartCreation

@@ -7,6 +7,8 @@ TagManager:
   - Coin
   - Spike
   - Spawnable
+  - Powerup
+  - Obstacle
   layers:
   - Default
   - TransparentFX
