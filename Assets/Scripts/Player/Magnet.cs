@@ -4,7 +4,7 @@ public class Magnet : MonoBehaviour
 {
     private CollisionManager cm;
     private SphereCollider magnetCollider;
-    private const float speed = 10f;
+    private const float speed = 20f;
 
     private void Start()
     {
@@ -20,6 +20,6 @@ public class Magnet : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("Coin") || other.CompareTag("Powerup"))
-            other.transform.Translate(Vector3.Normalize(other.transform.position - transform.position) * speed * Time.deltaTime);
+            other.transform.position = Vector3.MoveTowards(other.transform.position, transform.position, speed * Time.deltaTime);
     }
 }

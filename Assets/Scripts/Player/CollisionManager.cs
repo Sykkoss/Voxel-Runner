@@ -12,7 +12,6 @@ public class CollisionManager : MonoBehaviour
         timerInvincible = 0f;
         timerMultiplicator = 0f;
         bc = transform.parent.GetComponentsInChildren<BoxCollider>();
-        Debug.Log("Length: " + bc.Length);
     }
 
     private void OnTriggerEnter(Collider col)
