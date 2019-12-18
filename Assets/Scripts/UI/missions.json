@@ -1,8 +1,0 @@
-{
-  "Missions": [
-    { "title" : "Mission 1","goal": "coins", "goalNbr": 130, "reward" : "x2"},
-    { "title" : "Mission 2","goal": "coins", "goalNbr": 10, "reward" : "Magnet"},
-    { "title" : "Mission 3","goal": "coins", "goalNbr": 250, "reward" : "JSP"},
-    { "title" : "Mission 4","goal": "coins", "goalNbr": 1500, "reward" : "x2"}
-  ]
-}
