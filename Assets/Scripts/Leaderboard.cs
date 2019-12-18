@@ -27,7 +27,7 @@ public class Leaderboard : MonoBehaviour
         }
     }
 
-    public void AddScore(int score, string name)
+    public bool AddScore(int score, string name)
     {
         name = name.Replace(";", "").Replace("|", "");
         int playerIndex = -1;
@@ -56,6 +56,7 @@ public class Leaderboard : MonoBehaviour
             PlayerPrefs.SetString("leaderboard", string.Join("|", leaderboard.Select(x => x.Item1 + ";" + x.Item2)));
             PlayerPrefs.Save();
         }
+        return playerIndex == 0;
     }
 
     public List<Tuple<int, string>> GetLeaderboard()

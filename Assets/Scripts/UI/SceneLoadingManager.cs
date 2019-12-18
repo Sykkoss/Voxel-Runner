@@ -26,10 +26,13 @@ public class SceneLoadingManager : MonoBehaviour
             LoadPause();
     }
 
-    void LoadDeath()
+    public void LoadDeath()
     {
+        PlayerPrefs.SetInt("Account",
+            PlayerPrefs.GetInt("Account") + PlayerPrefs.GetInt("Coins"));
+        PlayerPrefs.SetInt("Coins", 0);
         GameObject.Find("LevelCanvas").SetActive(false);
-        SceneManager.LoadScene("GameOverScene", LoadSceneMode.Additive);
+        SceneManager.LoadScene("GameOverMenu", LoadSceneMode.Additive);
     }
 
     void LoadPause()

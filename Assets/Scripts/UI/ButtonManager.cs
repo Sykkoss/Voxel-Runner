@@ -46,6 +46,11 @@ public class ButtonManager : MonoBehaviour
         SceneManager.LoadSceneAsync("Shop", LoadSceneMode.Single);
     }
 
+    public void OpenMissions()
+    {
+        SceneManager.LoadSceneAsync("Missions", LoadSceneMode.Single);
+    }
+
     public void Quit()
     {
         Application.Quit();
@@ -65,13 +70,14 @@ public class ButtonManager : MonoBehaviour
 
     public void ShopBuy()
     {
-        int account = PlayerPrefs.GetInt("Coins");
-        if (account < 100)
+        int price = 100;
+        int account = PlayerPrefs.GetInt("Account");
+        if (account < price)
             return;
         var tmp = transform.parent.parent.GetChild(1).gameObject;
         var tmpName = tmp.name.Replace("(Clone)", "");
         PlayerPrefs.SetInt(tmpName, 1);
         transform.parent.parent.parent.GetComponent<ShopManager>().ResetFocus();
-        PlayerPrefs.SetInt("Coins", account - 100);
+        PlayerPrefs.SetInt("Account", account - price);
     }
 }

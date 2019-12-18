@@ -6,6 +6,7 @@ public class CollisionManager : MonoBehaviour
 {
     private float timerMagnet, timerInvincible, timerMultiplicator;
     private BoxCollider[] bc;
+    public GameObject sceneLoadingManager;
     private bool gameOver;
 
     private void Start()
@@ -46,10 +47,12 @@ public class CollisionManager : MonoBehaviour
             Destroy(col.gameObject);
         }
         else if ((col.CompareTag("Obstacle") || col.CompareTag("Spike")) && gameOver == false) {
-          GameObject.Find("MapManager").GetComponent<MoveGround>().enabled = false;
+            gameOver = true;
+            GameObject.Find("MapManager").GetComponent<MoveGround>().enabled = false;
           GameObject.FindWithTag("Player").GetComponent<ChangeLane>().enabled = false;
+            sceneLoadingManager.GetComponent<SceneLoadingManager>().LoadDeath();
+            transform.gameObject.SetActive(false);
           SceneManager.LoadScene("GameOverMenu", LoadSceneMode.Additive);
-          gameOver = true;
         }
     }
 
