@@ -8,7 +8,7 @@ public class ButtonManager : MonoBehaviour
 {
     public void Restart()
     {
-        SceneManager.LoadScene("Level", LoadSceneMode.Single);
+        SceneManager.LoadScene("Gameplay", LoadSceneMode.Single);
     }
 
     public void BackToMain()
