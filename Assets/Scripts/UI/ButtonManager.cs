@@ -13,7 +13,7 @@ public class ButtonManager : MonoBehaviour
 
     public void BackToMain()
     {
-        SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
+        SceneManager.LoadSceneAsync("MainMenu", LoadSceneMode.Single);
     }
 
     public void OutFromSettings()
@@ -28,7 +28,7 @@ public class ButtonManager : MonoBehaviour
 
     public void DisplayLeaderboard()
     {
-        SceneManager.LoadScene("Leaderboard", LoadSceneMode.Single);
+        SceneManager.LoadSceneAsync("Leaderboard", LoadSceneMode.Single);
     }
 
     public void DisplaySettings()
@@ -43,7 +43,7 @@ public class ButtonManager : MonoBehaviour
 
     public void OpenShop()
     {
-        SceneManager.LoadScene("Shop", LoadSceneMode.Single);
+        SceneManager.LoadSceneAsync("Shop", LoadSceneMode.Single);
     }
 
     public void Quit()
