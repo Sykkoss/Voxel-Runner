@@ -14,7 +14,7 @@ public class Magnet : MonoBehaviour
 
     private void Update()
     {
-        magnetCollider.enabled = !cm.IsMagnetActive();
+        magnetCollider.enabled = cm.IsMagnetActive();
     }
 
     private void OnTriggerStay(Collider other)
