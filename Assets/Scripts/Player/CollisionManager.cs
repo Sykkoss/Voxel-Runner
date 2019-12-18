@@ -4,14 +4,15 @@
 public class CollisionManager : MonoBehaviour
 {
     private float timerMagnet, timerInvincible, timerMultiplicator;
-    private BoxCollider bc;
+    private BoxCollider[] bc;
 
     private void Start()
     {
         timerMagnet = 0f;
         timerInvincible = 0f;
         timerMultiplicator = 0f;
-        bc = GetComponent<BoxCollider>();
+        bc = transform.parent.GetComponentsInChildren<BoxCollider>();
+        Debug.Log("Length: " + bc.Length);
     }
 
     private void OnTriggerEnter(Collider col)
@@ -52,12 +53,14 @@ public class CollisionManager : MonoBehaviour
         if (timerMagnet <= 0f) timerMagnet = 0f;
         if (timerInvincible <= 0f)
         {
-            bc.enabled = true;
+            foreach (BoxCollider c in bc)
+                c.enabled = true;
             timerInvincible = 0f;
         }
         else
         {
-            bc.enabled = false;
+            foreach (BoxCollider c in bc)
+                c.enabled = false;
         }
         if (timerMultiplicator <= 0f) timerMultiplicator = 0f;
     }
