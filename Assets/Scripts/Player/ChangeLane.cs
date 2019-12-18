@@ -28,7 +28,7 @@ public class ChangeLane : MonoBehaviour
       if (isMoving == false) {
         Vector3 targetPosition = transform.position.x * Vector3.forward;
         targetPosition.y = transform.position.y;
-        targetPosition.z = transform.position.z;
+        targetPosition.z = 0f;
         if (lane == 0) {
           targetPosition += Vector3.left * 0.9f;
         } else if (lane == 2) {
@@ -51,6 +51,7 @@ public class ChangeLane : MonoBehaviour
         transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, duration * Time.deltaTime);
         yield return null;
       }
+
       transform.position = targetPosition;
       isMoving = false;
     }
