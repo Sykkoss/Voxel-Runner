@@ -61,4 +61,7 @@ public class CollisionManager : MonoBehaviour
         }
         if (timerMultiplicator <= 0f) timerMultiplicator = 0f;
     }
+
+    public bool IsMagnetActive()
+        => timerMagnet > 0f;
 }
