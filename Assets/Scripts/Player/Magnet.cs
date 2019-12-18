@@ -4,7 +4,7 @@ public class Magnet : MonoBehaviour
 {
     private CollisionManager cm;
     private SphereCollider magnetCollider;
-    private const float speed = 10f;
+    private const float speed = 20f;
 
     private void Start()
     {
