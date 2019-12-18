@@ -14,12 +14,12 @@ public class Magnet : MonoBehaviour
 
     private void Update()
     {
-        magnetCollider.enabled = cm.IsMagnetActive();
+        magnetCollider.enabled = !cm.IsMagnetActive();
     }
 
     private void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("Coin") || other.CompareTag("Powerup"))
-            other.transform.Translate(Vector3.Normalize(other.transform.position - transform.position) * speed * Time.deltaTime);
+            other.transform.position = Vector3.MoveTowards(other.transform.position, transform.position, speed * Time.deltaTime);
     }
 }
