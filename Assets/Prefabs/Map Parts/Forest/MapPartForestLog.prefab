@@ -328,11 +328,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 620454071928652655}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 742cedc8c9c6bbe4ab884d81f311dd49,
-        type: 3}
-      propertyPath: m_Name
-      value: Log (1)
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 742cedc8c9c6bbe4ab884d81f311dd49,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -388,6 +383,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 742cedc8c9c6bbe4ab884d81f311dd49,
+        type: 3}
+      propertyPath: m_Name
+      value: Log (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2534866581884222612, guid: 742cedc8c9c6bbe4ab884d81f311dd49,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 742cedc8c9c6bbe4ab884d81f311dd49, type: 3}
 --- !u!1 &8916466073184532447 stripped
@@ -409,11 +414,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 620454071928652655}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 742cedc8c9c6bbe4ab884d81f311dd49,
-        type: 3}
-      propertyPath: m_Name
-      value: Log
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 742cedc8c9c6bbe4ab884d81f311dd49,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -469,6 +469,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 742cedc8c9c6bbe4ab884d81f311dd49,
+        type: 3}
+      propertyPath: m_Name
+      value: Log
+      objectReference: {fileID: 0}
+    - target: {fileID: 2534866581884222612, guid: 742cedc8c9c6bbe4ab884d81f311dd49,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 742cedc8c9c6bbe4ab884d81f311dd49, type: 3}
 --- !u!1 &8916466073233199753 stripped
@@ -490,11 +500,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 620454071928652655}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 742cedc8c9c6bbe4ab884d81f311dd49,
-        type: 3}
-      propertyPath: m_Name
-      value: Log (2)
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 742cedc8c9c6bbe4ab884d81f311dd49,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -550,6 +555,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 742cedc8c9c6bbe4ab884d81f311dd49,
+        type: 3}
+      propertyPath: m_Name
+      value: Log (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2534866581884222612, guid: 742cedc8c9c6bbe4ab884d81f311dd49,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 742cedc8c9c6bbe4ab884d81f311dd49, type: 3}
 --- !u!1 &8916466073213912917 stripped
@@ -571,11 +586,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 620454071928652655}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 43ef0a5aa5408d846a97aa7e87032278,
-        type: 3}
-      propertyPath: m_Name
-      value: GrassBlock2 (5)
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 43ef0a5aa5408d846a97aa7e87032278,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -631,6 +641,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 43ef0a5aa5408d846a97aa7e87032278,
+        type: 3}
+      propertyPath: m_Name
+      value: GrassBlock2 (5)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43ef0a5aa5408d846a97aa7e87032278, type: 3}
 --- !u!1 &8916466072619870951 stripped
@@ -652,11 +667,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 620454071928652655}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 4652092dcd20b754d874b2a97b71ca68,
-        type: 3}
-      propertyPath: m_Name
-      value: GrassBlock1 (4)
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 4652092dcd20b754d874b2a97b71ca68,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -712,6 +722,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 4652092dcd20b754d874b2a97b71ca68,
+        type: 3}
+      propertyPath: m_Name
+      value: GrassBlock1 (4)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4652092dcd20b754d874b2a97b71ca68, type: 3}
 --- !u!1 &8916466072535245808 stripped
@@ -733,11 +748,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 620454071928652655}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 4652092dcd20b754d874b2a97b71ca68,
-        type: 3}
-      propertyPath: m_Name
-      value: GrassBlock1 (5)
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 4652092dcd20b754d874b2a97b71ca68,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -793,6 +803,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 4652092dcd20b754d874b2a97b71ca68,
+        type: 3}
+      propertyPath: m_Name
+      value: GrassBlock1 (5)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4652092dcd20b754d874b2a97b71ca68, type: 3}
 --- !u!1 &8916466072462148201 stripped
@@ -814,11 +829,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 620454071928652655}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 43ef0a5aa5408d846a97aa7e87032278,
-        type: 3}
-      propertyPath: m_Name
-      value: GrassBlock2 (6)
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 43ef0a5aa5408d846a97aa7e87032278,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -874,6 +884,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 43ef0a5aa5408d846a97aa7e87032278,
+        type: 3}
+      propertyPath: m_Name
+      value: GrassBlock2 (6)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43ef0a5aa5408d846a97aa7e87032278, type: 3}
 --- !u!4 &5613454902901362099 stripped
@@ -895,11 +910,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 620454071928652655}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 4652092dcd20b754d874b2a97b71ca68,
-        type: 3}
-      propertyPath: m_Name
-      value: GrassBlock1 (7)
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 4652092dcd20b754d874b2a97b71ca68,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -955,6 +965,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 4652092dcd20b754d874b2a97b71ca68,
+        type: 3}
+      propertyPath: m_Name
+      value: GrassBlock1 (7)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4652092dcd20b754d874b2a97b71ca68, type: 3}
 --- !u!4 &5613454903363810549 stripped
@@ -976,11 +991,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 620454071928652655}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 43ef0a5aa5408d846a97aa7e87032278,
-        type: 3}
-      propertyPath: m_Name
-      value: GrassBlock2 (7)
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 43ef0a5aa5408d846a97aa7e87032278,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1036,6 +1046,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 43ef0a5aa5408d846a97aa7e87032278,
+        type: 3}
+      propertyPath: m_Name
+      value: GrassBlock2 (7)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43ef0a5aa5408d846a97aa7e87032278, type: 3}
 --- !u!1 &8916466072192874477 stripped
@@ -1057,11 +1072,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 620454071928652655}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 43ef0a5aa5408d846a97aa7e87032278,
-        type: 3}
-      propertyPath: m_Name
-      value: GrassBlock2 (8)
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 43ef0a5aa5408d846a97aa7e87032278,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1117,6 +1127,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 43ef0a5aa5408d846a97aa7e87032278,
+        type: 3}
+      propertyPath: m_Name
+      value: GrassBlock2 (8)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43ef0a5aa5408d846a97aa7e87032278, type: 3}
 --- !u!4 &5613454903798619639 stripped
@@ -1138,11 +1153,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 620454071928652655}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 4652092dcd20b754d874b2a97b71ca68,
-        type: 3}
-      propertyPath: m_Name
-      value: GrassBlock1 (6)
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 4652092dcd20b754d874b2a97b71ca68,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1198,6 +1208,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 4652092dcd20b754d874b2a97b71ca68,
+        type: 3}
+      propertyPath: m_Name
+      value: GrassBlock1 (6)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4652092dcd20b754d874b2a97b71ca68, type: 3}
 --- !u!1 &8916466071494952870 stripped
@@ -1219,11 +1234,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 620454071928652655}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 43ef0a5aa5408d846a97aa7e87032278,
-        type: 3}
-      propertyPath: m_Name
-      value: GrassBlock2 (9)
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 43ef0a5aa5408d846a97aa7e87032278,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1278,6 +1288,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 43ef0a5aa5408d846a97aa7e87032278,
+        type: 3}
+      propertyPath: m_Name
+      value: GrassBlock2 (9)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43ef0a5aa5408d846a97aa7e87032278, type: 3}

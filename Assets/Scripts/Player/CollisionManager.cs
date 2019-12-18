@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(BoxCollider))]
 public class CollisionManager : MonoBehaviour
@@ -41,6 +42,11 @@ public class CollisionManager : MonoBehaviour
                     throw new System.ArgumentException("Invalid powerup type");
             }
             Destroy(col.gameObject);
+        }
+        else if (col.CompareTag("Obstacle") || col.CompareTag("Spike")) {
+          GameObject.Find("MapManager").GetComponent<MoveGround>().enabled = false;
+          GameObject.FindWithTag("Player").GetComponent<ChangeLane>().enabled = false;
+          SceneManager.LoadScene("GameOverMenu", LoadSceneMode.Additive);
         }
     }
 
