@@ -200,6 +200,7 @@ GameObject:
   - component: {fileID: 457630450}
   - component: {fileID: 457630452}
   - component: {fileID: 457630451}
+  - component: {fileID: 457630453}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -266,6 +267,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 457630449}
   m_CullTransparentMesh: 0
+--- !u!114 &457630453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 457630449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47ffa90334ff4e245a80b32a7eee018f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &501038720
 GameObject:
   m_ObjectHideFlags: 0
@@ -393,7 +406,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45251dcddf852f542a2eec9691d6bc2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skins: []
+  skins:
+  - {fileID: 1857635186731952757, guid: b0ad68ef75bc5554fb091643f00afdf0, type: 3}
+  - {fileID: 8190592530332456394, guid: 84f0cb9e656215b489973aff9bbe5742, type: 3}
+  - {fileID: 1340578069665375231, guid: c87b1e5c57a6e4a4f8bd2ea8ebf08df1, type: 3}
+  - {fileID: 4948344422507396043, guid: 0711c3b0223b2f14db35faaf6438c8e5, type: 3}
+  - {fileID: 4720349618841359212, guid: 8be2aadc01a617242b3c2952ef5a83ee, type: 3}
+  - {fileID: 1001407072240308590, guid: c1caac55fde344c4781d627d03778eea, type: 3}
+  - {fileID: 4738409617275404341, guid: 5f6f44c389db1af4882a8bcfac0f201c, type: 3}
+  - {fileID: 797856566366167267, guid: 656eae9fed3280243ba5c0bd42fe7819, type: 3}
+  - {fileID: 797856566366167267, guid: a403d2313b3434c419b72453ba85251d, type: 3}
+  - {fileID: 797856566366167267, guid: d4ebdcf3d8fa73047940de134cc12b3c, type: 3}
+  - {fileID: 5679510567491442759, guid: f6f363cdb4a78e041a21e2347e8c50e0, type: 3}
+  - {fileID: 797856566366167267, guid: fa2141aec7821e646ae9cbbd037e8606, type: 3}
+  - {fileID: 797856566366167267, guid: 4aaaf7bbeb6de9d4483280e86babe9ec, type: 3}
+  - {fileID: 797856566366167267, guid: d76d7294a6c31334aadb99905418633c, type: 3}
   powerUps: []
   equip: []
   focusOn: 0

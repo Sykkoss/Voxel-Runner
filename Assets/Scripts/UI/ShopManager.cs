@@ -29,8 +29,8 @@ public class ShopManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        skins = new List<GameObject>(GetAtPath<GameObject>("Prefabs/Player/"));
-        powerUps = new List<GameObject>(GetAtPath<GameObject>("Prefabs/Power Ups/"));
+        //skins = new List<GameObject>(GetAtPath<GameObject>("Prefabs/Player/"));
+        //powerUps = new List<GameObject>(GetAtPath<GameObject>("Prefabs/Power Ups/"));
         skinPosition = new Vector3(0, -150);
         skinScale = new Vector3(150, 150, -150);
         placeholder = GameObject.Find("Placeholder");
@@ -57,11 +57,6 @@ public class ShopManager : MonoBehaviour
     {
         FetchEquip();
         SetFocus(focusOn);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
     }
 
     public void ChangeFocus(int tab)
@@ -138,9 +133,7 @@ public class ShopManager : MonoBehaviour
             GameObject.Destroy(child.gameObject);
     }
 
-    
-
-    private static T[] GetAtPath<T>(string path)
+    /*private static T[] GetAtPath<T>(string path)
     {
         ArrayList al = new ArrayList();
         string[] fileEntries = Directory.GetFiles(Application.dataPath + "/" + path);
@@ -162,5 +155,5 @@ public class ShopManager : MonoBehaviour
             result[i] = (T)al[i];
 
         return result;
-    }
+    }*/
 }
