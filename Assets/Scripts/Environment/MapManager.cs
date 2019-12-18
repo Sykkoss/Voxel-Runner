@@ -176,9 +176,7 @@ public class MapManager : MonoBehaviour
       GameObject spawnPoint;
 
       if (Random.value < spawnChanceObject) {
-        print(ground.name);
         spawn = ground.transform.Find("Coins");
-        print(spawn.childCount - 1);
         spawnPoint = spawn.GetChild(Random.Range(0, spawn.childCount - 1)).transform.gameObject;
         if (Random.value < spawnChancePowerUps) {
           //Spawn random powerUps

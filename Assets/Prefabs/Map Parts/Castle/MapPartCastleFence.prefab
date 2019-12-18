@@ -920,6 +920,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence
       objectReference: {fileID: 0}
+    - target: {fileID: 4349098235984779466, guid: f55f613fbbe97174abbea749e32f8411,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 4349098235984779465, guid: f55f613fbbe97174abbea749e32f8411,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -989,6 +994,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 2267208868629003305, guid: f55f613fbbe97174abbea749e32f8411,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f55f613fbbe97174abbea749e32f8411, type: 3}
