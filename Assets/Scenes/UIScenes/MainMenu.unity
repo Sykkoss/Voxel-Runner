@@ -905,7 +905,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1646789278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -935,12 +935,8 @@ MonoBehaviour:
   maxParts: 20
   partSize: 2.7
   numberStartParts: 3
-  mapParts:
-  - {fileID: 122224, guid: 4290fc06906297e4e88acef37d498339, type: 3}
-  - {fileID: 129368, guid: ec8843646b78cd243acdac1d7372dc11, type: 3}
-  - {fileID: 191416, guid: de3c4538811e156418837a6847ada5af, type: 3}
-  - {fileID: 105518, guid: 5100bfb5ad632bf419594286f97ca627, type: 3}
-  - {fileID: 126642, guid: e27d2e9659c129646b0d01bbcf9342f3, type: 3}
+  numberPartsToChangeBiome: 0
+  biomes: []
 --- !u!4 &1646789280
 Transform:
   m_ObjectHideFlags: 0
