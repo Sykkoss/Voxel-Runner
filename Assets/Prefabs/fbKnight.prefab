@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2318266}
   - component: {fileID: 6525324}
   - component: {fileID: 5425212}
-  - component: {fileID: 11420674}
+  - component: {fileID: 594230674719211795}
   m_Layer: 0
   m_Name: fbKnight
   m_TagString: Player
@@ -113,7 +113,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &11420674
+--- !u!114 &594230674719211795
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -122,10 +122,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 182500}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3514f6afef75b405fbf45f5a531531b6, type: 3}
+  m_Script: {fileID: 11500000, guid: 764fc2b87b905a944940acd64020ed70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveDistance: 0.9
 --- !u!1 &582901487
 GameObject:
   m_ObjectHideFlags: 0
