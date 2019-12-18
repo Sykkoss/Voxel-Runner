@@ -16,9 +16,14 @@ public class ButtonManager : MonoBehaviour
         SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
     }
 
-    public void ReturnBack()
+    public void OutFromSettings()
     {
-        SceneManager.UnloadSceneAsync(SceneManager.sceneCount - 1);
+        SceneManager.UnloadSceneAsync("Settings");
+    }
+
+    public void OutFromPause()
+    {
+        SceneManager.UnloadSceneAsync("Pause");
     }
 
     public void DisplayLeaderboard()
@@ -60,10 +65,13 @@ public class ButtonManager : MonoBehaviour
 
     public void ShopBuy()
     {
-        // TODO : Remove 1000 pieces
+        int account = PlayerPrefs.GetInt("Coins");
+        if (account < 100)
+            return;
         var tmp = transform.parent.parent.GetChild(1).gameObject;
         var tmpName = tmp.name.Replace("(Clone)", "");
         PlayerPrefs.SetInt(tmpName, 1);
         transform.parent.parent.parent.GetComponent<ShopManager>().ResetFocus();
+        PlayerPrefs.SetInt("Coins", account - 100);
     }
 }

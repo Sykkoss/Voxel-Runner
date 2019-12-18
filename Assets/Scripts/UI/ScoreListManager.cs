@@ -17,8 +17,8 @@ public class ScoreListManager : MonoBehaviour
 
     private void DisplayList(List<Tuple<int, string>> list)
     {
-        int yShift = -70;
-        var position = new Vector2(0, -50);
+        int yShift = -65;
+        var position = new Vector2(0, -10);
         for (int i = 0; i < 10; i++)
         {
             var tmp = Instantiate(defaultScore, transform);
